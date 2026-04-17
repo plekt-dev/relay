@@ -1,0 +1,22 @@
+# plekt-relay configuration.
+# Copy this file to config.yml and fill in webhook_secret.
+# Run: ./plekt-relay -config config.yml
+
+# Listen address for the webhook receiver.
+addr: ":8765"
+
+# Hex-encoded HMAC secret shared with the core dispatcher. Required.
+webhook_secret: ""
+
+# Path or name of the claude CLI.
+claude_bin: "claude"
+
+# Extra args appended after "code -p <prompt>". Accepts either a list
+# or a single space-separated string.
+claude_args: []
+# claude_args: ["--model", "opus"]
+# claude_args: "--model opus"
+
+# Per-prompt timeout. Any duration accepted by Go's time.ParseDuration
+# (e.g. "90s", "5m", "1h").
+run_timeout: "5m"
